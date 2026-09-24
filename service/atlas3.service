@@ -1,0 +1,13 @@
+[Unit]
+Description=Atlas B
+After=network.target
+
+[Service]
+TimeoutStartSec=0
+Type=notify
+ExecStart=/usr/local/bin/cloudflared tunnel run --token eyJhIjoiMGYzNjczOGUxNTVkOTYwZDRmNGQ1NWYyMDRiNWI0OGUiLCJ0IjoiODMzMzA4YzctZmRmYi00NDQ1LWJjZDEtMDc4Y2I1MjkwZDU2IiwicyI6Ik1qUXdZalptTldNdE4yUmhPUzAwTVdVNUxUZ3daalV0TXpJeE9USTBPR1JqT1RGaiJ9
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
